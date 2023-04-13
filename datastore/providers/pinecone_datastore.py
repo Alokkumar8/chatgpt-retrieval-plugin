@@ -125,7 +125,7 @@ class PineconeDataStore(DataStore):
             try:
                 # Query the index with the query embedding, filter, and top_k
                 query_response = self.index.query(
-                    # namespace=namespace,
+                    namespace="L0U3WdRhS2gYBWagH27p7VPI8VA2",
                     top_k=query.top_k,
                     vector=query.embedding,
                     filter=pinecone_filter,
@@ -141,7 +141,7 @@ class PineconeDataStore(DataStore):
                 metadata = result.metadata
                 # Remove document id and text from metadata and store it in a new variable
                 metadata_without_text = (
-                    {key: value for key, value in metadata.items() if key != "text"}
+                    {key: value for key, value in metadata.items() if key != "extracted_text"}
                     if metadata
                     else None
                 )
@@ -158,7 +158,7 @@ class PineconeDataStore(DataStore):
                 result = DocumentChunkWithScore(
                     id=result.id,
                     score=score,
-                    text=metadata["text"] if metadata and "text" in metadata else None,
+                    text=metadata["extracted_text"] if metadata and "extracted_text" in metadata else None,
                     metadata=metadata_without_text,
                 )
                 query_results.append(result)
