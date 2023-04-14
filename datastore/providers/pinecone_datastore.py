@@ -17,9 +17,9 @@ from models.models import (
 from services.date import to_unix_timestamp
 
 # Read environment variables for Pinecone configuration
-PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
-PINECONE_ENVIRONMENT = os.environ.get("PINECONE_ENVIRONMENT")
-PINECONE_INDEX = os.environ.get("PINECONE_INDEX")
+PINECONE_API_KEY = "fab3a09b-16dd-4c79-a7f3-40434017a83b"
+PINECONE_ENVIRONMENT = "us-west1-gcp"
+PINECONE_INDEX = "pdf-analysis-saas-cosine"
 assert PINECONE_API_KEY is not None
 assert PINECONE_ENVIRONMENT is not None
 assert PINECONE_INDEX is not None
