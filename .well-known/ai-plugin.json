@@ -2,16 +2,16 @@
   "schema_version": "v1",
   "name_for_model": "corpora_plugin",
   "name_for_human": "Corpora",
-  "description_for_model": "Plugin for searching through the user's documents (such as files, emails, and more) to find answers to questions and retrieve relevant information. Use it whenever a user asks something that might be found in their personal information.",
+  "description_for_model": "Plugin for searching through the user's documents (such as files, emails, and more) to find answers to questions and retrieve relevant information. Use it whenever a user asks something that might be found in their personal information. Or use it when you see word Askcorpora or Askc",
   "description_for_human": "Search through your documents.",
   "auth" : {
     "type":"oauth",
-    "client_url":"https://www.askcorpora.com/login",
-    "authorization_url":"https://pdf-analysis-saas.vercel.app/login",
+    "client_url":"https://www.askcorpora.com/login/",
+    "authorization_url":"https://pdf-analysis-saas.vercel.app/login/",
     "scope":"search:read",
     "authorization_content_type":"application/x-www-form-urlencoded",
     "verification_tokens":{
-			"openai":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImM4MjNkMWE0MTg5ZjI3NThjYWI4NDQ4ZmQ0MTIwN2ViZGZhMjVlMzkiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQWxvayBLdW1hciIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BRWRGVHA0MzQ5R01WSER2Rms5RlEzRzRuajlUa2dUTWVQdXFOY3A5VlY4ZXJ3ST1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9wZGYtYW5hbHlzaXMtc2FhcyIsImF1ZCI6InBkZi1hbmFseXNpcy1zYWFzIiwiYXV0aF90aW1lIjoxNjc5NzYzMTk5LCJ1c2VyX2lkIjoiTDBVM1dkUmhTMmdZQldhZ0gyN3A3VlBJOFZBMiIsInN1YiI6IkwwVTNXZFJoUzJnWUJXYWdIMjdwN1ZQSThWQTIiLCJpYXQiOjE2ODEzMDU2OTksImV4cCI6MTY4MTMwOTI5OSwiZW1haWwiOiJhbG9ra3VtYXIuam52MTBAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDU1MTY3MDkwMTE1NzgzODg2ODEiXSwiZW1haWwiOlsiYWxva2t1bWFyLmpudjEwQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.qeVuJPfHVKilOlj642urILg-DzvyOgtDlISRADVqgAqemlt6QnXnaZxt6ObVOizQPGOqzKv6u6O8L97l_dVLyc9VKMwTuxqbfOP8ODX-OzIJfY0ZbnvA5BeNB0S7YQqqyb1JLdCWCxh0s_oiu7GhRuzSjbCPuzgGpAPSfR2X_zhqxh0Q_DZrEIQiB6Ne4sHSClIzk_W-YZ2Dz-5wEmm-3D2Fy5z4WSAfrtpvPRvMnACEJnWYARWhEYZzZfR8bDdmteDyHDkWG08cZfEktZeFvgr8IXAqMqs8YwbWRR-ZgEIHo2alt8a44-P_HgGhpqySW890Z-Qca3fvsd0S6jYP8w"
+			"openai":"8f8cf4a00f19475bacea60828eb2c0a2"
     }
   },
   "api": {
