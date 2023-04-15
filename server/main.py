@@ -4,6 +4,7 @@ import uvicorn
 from fastapi import FastAPI, File, Form, HTTPException, Depends, Body, UploadFile
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.staticfiles import StaticFiles
+import requests
 
 from models.api import (
     DeleteRequest,
@@ -24,8 +25,21 @@ assert BEARER_TOKEN is not None
 
 
 def validate_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme)):
-    if credentials.scheme != "Bearer" or credentials.credentials != BEARER_TOKEN:
-        raise HTTPException(status_code=401, detail="Invalid or missing token")
+    if credentials.scheme == "Bearer" :
+        token = credentials.credentials
+
+        print("Token from openai request:", token)
+
+        r = requests.post("https://pdf-analysis-saas.onrender.com/login-plugin", data={ 'grant_type': token })
+        result = r.json()
+
+        print("result", result)
+
+        # namespace = result.namespace
+
+        # print("namespace", namespace)
+
+        # raise HTTPException(status_code=401, detail="Invalid or missing token")
     return credentials
 
 
